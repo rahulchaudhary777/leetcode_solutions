@@ -1,0 +1,22 @@
+// return first index where subString found.
+
+class Solution {
+    public int strStr(String haystack, String needle) {
+        
+        int a = haystack.length();
+        int b = needle.length();
+        
+        int x=0, y=b;
+        int s=-1;
+        
+        for(int i=0;i<=(a-b);i++){
+            if(haystack.substring(x,y).equals(needle)){
+                s=x;
+                break;
+            }
+            x++;y++;
+        }
+        
+    return s;
+}
+}
