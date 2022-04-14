@@ -1,0 +1,24 @@
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        
+        int i=0,s=0;
+        int max = nums.length-1;
+        int max_val = nums[nums.length-1];
+        
+        if(max_val<target){
+            s = nums.length;
+        }
+        else{
+            while(nums[i] <= target && i < max){
+                if(nums[i] == target){
+                    s = i;
+                }
+                else{
+                    s=i+1;
+                }
+                i++;
+            }
+        }
+        return s;
+    }
+}
